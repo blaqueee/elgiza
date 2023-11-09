@@ -1,0 +1,54 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden; /* Prevent background image overflow */
+}
+
+#background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#background-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+#video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 1; /* Ensure the video container is above the background photo */
+}
+
+#wedding-video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* border: 5px solid white; */
+}
+
+/* Adaptive CSS for mobile devices */
+@media (max-width: 768px) {
+    #video-container {
+        border-radius: 5px;
+        width: 89%;
+        box-sizing: border-box;
+    }
+
+    #wedding-video {
+        border-radius: 5px;
+    }
+}
